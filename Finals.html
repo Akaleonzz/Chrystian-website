@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang='en' dir="ltr">
+<html>
+<head>
+<title> Home Page </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="Finals.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
+awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="new 1.js"></script>
+<head>
+<body onload="initClock()">
+
+<header>
+<a href="#" style="display:flex;">
+<img src="250px-Coat_of_arms_of_the_Philippines.svg.png">
+<img src="IMFITP_multicolored.png">
+</a>
+<div class="datetime">
+<div class="date">
+<span id="dayname">Day</span>,
+<span id="month">Month</span>
+<span id="daynum">00</span>,
+<span id="year">Year</span>
+</div>
+<div class="time">
+<span id="hour">00</span>:
+<span id="minutes">00</span>:
+<span id="seconds">00</span>
+<span id="period">AM</span>
+<script type="text/javascript">
+			function updateClock(){
+			var now = new Date();
+			var dname = now.getDay(),
+			mo = now.getMonth(),
+			dnum = now.getDate(),
+			yr = now.getFullYear(),
+			hou = now.getHours(),
+			min = now.getMinutes(),
+			sec = now.getSeconds(),
+			pe = "AM";
+			if(hou >= 12){
+				pe = "PM";
+			}
+			if(hou == 0){
+				hou = 12;
+			}
+			if(hou > 12){
+				hou = hou - 12;
+			}
+			Number.prototype.pad = function(digits){
+				for(var n = this.toString(); n.length < digits; n = 0 + n);
+				return n;
+			}
+			var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+			var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+			var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+			var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+			for(var i = 0; i < ids.length; i++)
+			document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+			}
+			function initClock(){
+				updateClock();
+				window.setInterval("updateClock()", 1);
+			}
+		</script>
+</div>
+</div>
+</header>
+<main>
+    <div id="sideBtn">
+		<button class="openbtn" onclick="openNav()">☰</button>  
+</div>
+
+<div class="sidenav">
+<button class="dropdown-btn"> About Philippines 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<a 
+href="#history"> History </a>
+<a 
+href="#geography"> Geography and 
+Environment </a>
+<a 
+href="#demographics"> Demographics 
+</a>
+<a 
+href="#culture"> Culture </a>
+</div>
+<button class="dropdown-btn"> Tourist Attractions 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<a 
+href="#luzon"> Luzon </a>
+<a 
+href="#visayas"> Visayas </a>
+<a 
+href="#mindanao"> Mindanao </a>
+</div>
+<a 
+href=" /storage/emulated/0/Alarms/VideoGallery.html"><i class="fa fa-fw fa-
+youtube-play"></i> Video Gallery </a>
+<a 
+href="/storage/emulated/0/Alarms/loginform.html"><i class="fa fa-fw fa-user"></i> 
+Log-In </a>
+<a 
+href="/storage/emulated/0/Alarms/Contactus.html"><i class="fa fa-fw fa-
+envelope"></i> Contact Us</a>
+</div>
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+for (i = 0; i < dropdown.length; i++) {
+dropdown[i].addEventListener("click", function() {
+this.classList.toggle("active");
+var dropdownContent = this.nextElementSibling;
+if (dropdownContent.style.display === "block") {
+dropdownContent.style.display = "none";
+} else {
+dropdownContent.style.display = "block";
+}
+ });
+}
+</script>
+<section id="history">    
+<div class="section-inner">    
+<h1> Philippine History</h1>
+<br>
+<table cellspacing=10px>
+<tr>
+<td>
+<img 
+src="images(precolonial).jpeg" alt="Philippine History">
+</td>
+</tr>
+<tr>
+<td>
+<h3 style="text-indent:20px;"> Pre-
+Colonial Period</h3>
+<blockquote>
+<p> The Philippines' pre-colonial period was filled with indigenous peoples engaged in healthy trade with various cultures and economies in the region and the foreign traders. Archeological findings, existing literature and other proof of pre-colonial communities in the Philippines provide evidence of Filipinos’ rich cultural heritage. The majority of the political system in the early Philippines was led by leaders called “Datus”, responsible for ruling autonomous groups called “barangay” or “dulohan”.</p>
+
+</blockquote>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images (spanishperiod).jpeg" 
+alt="Philippine History">
+</td>
+</tr>
+<tr>
+<td>
+<h3 style="text-indent:20px;"> 
+Spanish Period</h3>
+<blockquote>
+<p>Spanish colonial motives were not, however, strictly commercial. The Spanish at first viewed the Philippines as a stepping-stone to the riches of the East Indies (Spice Islands), but, even after the Portuguese and Dutch had foreclosed that possibility, the Spanish still maintained their presence in the archipelago.
+
+The Portuguese navigator and explorer Ferdinand Magellan headed the first Spanish foray to the Philippines when he made landfall on Cebu in March 1521; a short time later he met an untimely death on the nearby island of Mactan. After King Philip II (for whom the islands are named) had dispatched three further expeditions that ended in disaster, he sent out Miguel López de Legazpi, who established the first permanent Spanish settlement, in Cebu, in 1565. The Spanish city of Manila was founded in 1571, and by the end of the 16th century most of the coastal and lowland areas from Luzon to northern Mindanao were under Spanish control. Friars marched with soldiers and soon accomplished the nominal conversion to Roman Catholicism of all the local people under Spanish administration.</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images (americanperiod).jpeg" 
+alt="Philippine History">
+</td>
+</tr>
+<tr>
+<td>
+<h3 style="text-indent:20px;"> 
+American Period</h3>
+<blockquote>
+<p>The period of American colonialization of the Philippines was 48 years. It began with the cession of the Philippines to the U.S. by Spain in 1898 and lasted until the U.S. recognition of Philippine independence in 1946. After independence in 1946, many Americans chose to remain in the Philippines while maintaining relations with relatives in the US. 
+
+The ensuing Philippine-American War lasted three years and resulted in the death of over 4,200 American and over 20,000 Filipino combatants. As many as 200,000 Filipino civilians died from violence, famine, and disease. The decision by U.S. policymakers to annex the Philippines was not without domestic controversy.</p>
+</blockquote>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images (japaneseperiod).jpeg" 
+alt="Philippine history">
+</td>
+</tr>
+<tr>
+<td>
+<h3 style="text-indent:20px;"> 
+Japanese Period</h3>
+<blockquote>
+<p>The Japanese occupation of the Philippines  occurred between 1942 and 1945, when Imperial Japan occupied the Commonwealth of the Philippines during World War II.
+
+Japan occupied the Philippines for over three years, until the surrender of Japan. A highly effective guerrilla campaign by Philippine resistance forces controlled sixty percent of the islands, mostly forested and mountainous areas. MacArthur supplied them by submarine, and he sent reinforcements and officers. The Filipino population remained generally loyal to the United States, partly because of the American guarantee of independence, because of the Japanese mistreatment of Filipinos after the surrender, and because the Japanese had pressed large numbers of Filipinos into work details and put young Filipino women into brothels.</p>
+</blockquote>
+</td>
+</tr>
+</table>
+</div>
+</section>
+<section id="geography">
+<div class="section-inner">
+<h1>Philippine Geography and Environment </h1>
+<center>
+<img src="images (map).jpeg" alt="Philippine Map">
+</center>
+<blockquote>
+<p>The Philippines is an archipelago, or string of over 7,100 islands, in southeastern Asia between the South China Sea and the Pacific Ocean. The two largest islands, Luzon and Mindanao, make up for two-thirds of the total land area. Only about one third of the islands are inhabited.
+The Philippines is an archipelago that comprises 7,641 islands with a total land area of 300,000 square kilometers (115,831 sq mi). It is the world's fifth largest island country. The eleven largest islands contain 95% of the total land area. The largest of these islands is Luzon at about 105,000 square kilometers (40,541 sq mi). The next largest island is Mindanao at about 95,000 square kilometers (36,680 sq mi). The archipelago is around 800 kilometers (500 mi) from the Asian mainland and is located between Taiwan and Borneo. </p>
+</blockquote>
+</div>
+</section>
+
+<section id="demographics">
+<div class="section-inner">
+<h1> Philippine Demographics </h1>
+<center>
+<img src="Philippines_single_age_population_pyramid_2020.png" alt="demographics"></center>
+<blockquote>
+<p> Demography of the Philippines records the human population, including its population density, ethnicity, education level, health, economic status, religious affiliations, and other aspects. The Philippines annualized population growth rate between the years 2015–2020 was 1.63%. According to the 2020 census, the population of the Philippines is 109,035,343. The first census in the Philippines was held in the year 1591 which counted 667,612 people.
+</p>
+</blockquote>
+</div>
+</section>
+
+<section id="culture">
+<div class="section-inner">
+<h1> Philippine Culture </h1>
+<br>
+<center>
+<img src="images (culture).jpeg" alt="Filipino Values"
+style="float:left;">
+</center>
+<blockquote>
+<p> The Philippines is a culture in which East meets West. The Filipino people have a distinct Asian background, with a strong Western tradition. The modern Filipino culture developed through influence from Chinease traders, Spanish conquistadors, and American rulers.
+
+The food culture in the Philippines is very different from that of the Western’s culture. Filipinos are big eaters and love to eat rice. Rice is a food staple in every Filipino’s meal every day. It’s quite impossible to see a Filipino who doesn’t eat rice, unless that person is on a strict diet. In fact, there are many restaurants who even offer “unlimited rice”. That’s how huge Filipinos’ love for rice is. 
+
+The Filipino culture and values are just among the good things that are appreciated by many people from across the world. In the Philippines, family is valued so much. Children live with their parents until they are married. The Filipino family culture is something that many people applaud because the locals value family time so much. 
+</blockquote>
+</div>
+</section>
+
+<section id="luzon">
+<div class="section-inner">
+<h1> Tourist Attractions in Luzon </h1>
+<table class="tourist-spots">
+<tr>
+<td>
+<center>
+<h3> Calle Crisologo, Vigan   </h3>
+<figure>
+<img src="images (20).jpeg" 
+alt="Calle Crisologo, Vigan" style="max-width:100%; height:auto;">
+<figcaption><i>Some of the best tourist spots and beautiful places in Luzon will either transport you to another world or at another time. The latter is the case for our next destination, Calle Crisologo in Vigan City, Ilocos Sur.
+
+Known for its cobblestone streets, old-timey charm, and preserved Spanish-era architecture, Calle Crisologo in Vigan tours defies the test of time and is one of the most visited places in North Luzon and a must add to any Ilocos itinerary.</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3> Rizal Park</h3>
+<figure>
+<img 
+src="image(rizal.jpg" alt="Rizal Park" style="max-width:100%; height:auto;">
+<figcaption><i>If you're not up for a long drive, then take a short trip from Manila airport and visit the most iconic place in the capital, the Rizal Park. Also known as Luneta Park, this staple in Manila tours covers approximately 140 acres of land surrounding the Rizal Monument, near some of the best hotels in Manila. It is a place built to pay homage to the Philippine national hero, Jose Rizal.
+
+Rizal Park has three sections: The northeastern section where you can find the National Museum Complex, the central section where the monument stands along with the Open-Air Auditorium, and the southwestern section that covers the Quirino Grandstand and the Manila Ocean Park. </i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3> Taal Volcano</h3>
+<figure>
+<img src="images (21).jpeg" 
+alt="Taal Volcano" style="max-width:100%; height:auto;">
+<figcaption><i> Take a short drive to Tagaytay City, another one of the top places to visit in South Luzon, and treat yourself to cold weather, good food, and scenic views of Taal Volcano and Lake at one of the most popular kid-friendly places near Manila. The Taal Volcano is famous for being the smallest active volcano in the world.
+
+Though trips to the active volcano are not allowed, viewing the  “island within a lake, inside a volcano” dining at Tagaytay restaurants, enjoying the cool breeze at parks, sipping hot coffee at Tagaytay coffee shops, and staying at the best hotels in Tagaytay are part of the experience when traveling here. It's best to book a Tagaytay staycation at hotels with a Taal view. </i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+</table>
+</section>
+
+<section id="visayas">
+<div class="section-inner">
+<h1> Tourist Attraction In Visayas </h1>
+<table class="tourist-spots">
+<tr>
+<td>
+<center>
+<h3> Chocolate Hills (Bohol) </h3>
+<figure>
+<img src="images (22).jpeg" alt="Chocolate Hills (Bohol)" style="max-width:100%; height:auto;">
+<figcaption><i>The Chocolate Hills is one of the beloved attractions in Bohol. This site is a famous tourist spot in Visayas and is often considered one of the natural wonders of the world.  This group of hills is extraordinary because of their sheer number, symmetry, and color.  
+
+Joining Chocolate Hills tours will let you get a glimpse of more than 1700 hills scattered around a 50 square kilometer land area and enjoy other Chocolate Hills activities. Green grass usually covers these hills. But during the dry season, the grass turns brown and gives the hills their famous chocolate brown color.</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3> White Beach Boracay (Aklan)   </h3>
+<figure>
+<img src="images (23).jpeg" 
+alt="White Beach Boracay (Aklan)" style="max-width:100%; height:auto;">
+<figcaption><i>This beach is the main accommodation area, dining, and entertainment area for tourists visiting Boracay. The majority of Boracay resorts including Boracay hotels for family are on White Beach, making it a popular choice for couples who want to have their honeymoon in the Philippines. This beach is also lined with numerous Boracay restaurants, cafes, Boracay bars and shops.  </i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3> Islas de Gigantes (Iloilo)  </h3>
+<figure>
+<img src="images (24).jpeg" 
+alt="Islas de Gigantes (Iloilo)" style="max-width:100%; height:auto;">
+<figcaption><i>Islas de Gigantes is a group of islands situated off the coast of the northeastern Iloilo towns of Estancia and Carles. It is one of the top Iloilo tourist spots because of its wide range of natural attractions. Islas de Gigantes is home to beautiful lagoons, rock formations, caves, and white sand beaches. 
+
+This island group’s name means “Land of the Giants”. This is because large human skeletons were discovered on these islands. At that time, many people believed that these skeletons belonged to giants.</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+</table>
+</div>
+</section>
+
+<section id="mindanao">
+<div class="section-inner">
+<h1> Tourist Attractions In Mindanao</h1>
+<table class="tourist-spots">
+<tr>
+<td>
+<center>
+<h3> Philippine Eagle Centre (Davao)</h3>
+<figure>
+<img src="images (25).jpeg" 
+alt="Philippine Eagle Centre (Davao) " style="max-width:100%; height:auto;">
+<figcaption><i>Home to the critically endangered bird species, the Philippine Eagle, the Philippine Eagle Centre is an 8-hectare wildlife breeding center in Davao City that shelters the only captive eagles in the country. From massive aviaries to smaller cages for other endemic birds, the world-class park features enclosures and towering aviary duplexes resembling those in Singapore Zoo.</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3>Maria Cristina Falls (Iligan)</h3>
+<figure>
+<img src="images (26).jpeg" 
+alt="Maria Cristina Falls (Iligan)" style="max-width:100%; height:auto;">
+<figcaption><i> One of the most beautiful waterfalls as told in Philippine history books is the Maria Cristina Falls, also called the Twin Falls. The 320-foot cascade is a sight to behold in Iligan, which is also known as the City of Majestic Waterfalls. According to the legend, Maria and Cristina are beautiful twin sisters who fell in love with the same man.</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>
+<h3>Eden Nature Park (Davao)</h3>
+<figure>
+<img src="images (27).jpeg" 
+alt="Eden Nature Park (Davao)" style="max-width:100%; height:auto;">
+<figcaption><i> Great spot to unwind, try recreational activities, and capture spectacular views. The mountain resort has different types of accommodation, ranging from garden/mountain villas to log cabins.
+
+Eden Nature Park boasts 11 attractions: Amphitheater, Birdwalk, Deer Park, Flower Garden, Hiking Trail, Lola’s Garden, Hydroponics, Playground, Butterfly Garden, Tinubdan, Bamboo Maze. Enjoy taking photos while trying out some exciting activities like the skyrider, skycycle, sky swing, horseback riding.
+</i></figcaption>
+</figure>
+</center>
+</td>
+</tr>
+</table>
+</div>
+</section>
+<footer>
+<div class="footer-container">
+<div class="container">
+<h3> About Philippines </h3>
+<ul>
+<li><a 
+href="#history"> History </a></li>
+<li><a 
+href="#geography"> Geography and Environment </a></li>
+<li><a 
+href="#demographics"> Demographics 
+</a></li>
+<li><a 
+href="#culture"> Culture </a></li>
+</ul>
+</div>
+<div class="container">
+<h3> Tourist Attractions </h3>
+<ul>
+<li><a 
+href="#luzon"> Luzon </a></li>
+<li><a 
+href="#visayas"> Visayas </a></li>
+<li><a 
+href="#mindanao"> Mindanao </a></li>
+</ul>
+</div>
+<div class="container">
+<h3><a 
+href="/storage/emulated/0/Alarms/VideoGallery.html"> Video Gallery 
+</a></h3>
+</div>
+<div class="container">
+<h3><a 
+href="/storage/emulated/0/Alarms/loginform.html"> Log-in </a></h3>
+</div>
+<div class="container">
+<h3><a 
+href="/storage/emulated/0/Alarms/Contactus.html"> Contact Us </a></h3>
+</div>
+</div>
+
+<center>
+<p> Copyright @ 2022. All Rights Reserved. </p>
+</center>
+</footer>
+</body>
+</html>
+
+
